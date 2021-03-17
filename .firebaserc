@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "picth-tempo": {
+      "hosting": {
+        "picth-tempo-ssr": [
+          "picth-tempo"
+        ]
+      }
+    }
+  }
+}
