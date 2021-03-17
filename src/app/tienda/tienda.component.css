@@ -1,0 +1,23 @@
+
+
+.list {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+.li{
+  font-size: x-large;
+  font-weight: 800;
+  color: white;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: #a3c517;
+  margin: .5px;
+}
