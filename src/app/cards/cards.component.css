@@ -1,0 +1,76 @@
+
+
+.cont {
+  font-family: system-ui,-apple-system;
+  display: flex;
+  width: 90%;
+  margin: 0 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card{
+  z-index: 101;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: white;
+  margin: .5rem;
+  width: 18rem;
+  margin-bottom: 1rem;
+  display: grid;
+  align-items: center;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+  padding-bottom: 0px;
+}
+
+
+.card-img-top{
+  border-radius: 5px;
+  margin: auto;
+  width: calc(18rem - 8px);
+  height: auto;
+}
+.card-title{
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+.buttons{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  padding: .5rem 1rem;
+  border-radius: 12px;
+  font-family: system-ui;
+  font-weight: 700;
+  border: none;
+}
+.red{
+  color: wheat;
+  background-color: red;
+}
+.green{
+  color: wheat;
+  background-color:green;
+}
+
+.btn-p{
+  color: chartreuse;
+  padding: 0rem .4rem.2rem.4rem;
+  display: block;
+  width: fit-content;
+  border-radius: 15px;
+  border: solid;
+  margin: .5rem;
+}
+.card-text{
+  text-overflow: ellipsis;
+  height: 4rem;
+  overflow: hidden;
+}

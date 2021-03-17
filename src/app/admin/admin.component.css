@@ -1,0 +1,70 @@
+.card-adm {
+  font-family: system-ui,-apple-system;
+  font-size: larger;
+  font-weight: 500;
+  z-index: 101;
+  position: relative;
+  background: #36393e;
+  width: 90%;
+  margin: 2rem auto;
+  border-radius: 28px;
+  border: solid #d1d1d1;
+}
+
+h3 {
+  font-size: 150%;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+label{
+display: block;
+margin: .5rem;
+}
+input{
+  width: 100%;
+  padding: .5rem 0;
+  margin-bottom: .5rem;
+}
+textarea {width: 100%;}
+.enviar {
+  background-color: #95ca43;
+  width: 50%;
+  margin: 1rem auto;
+  color: white;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+
+.sel {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.form-g {
+  padding: 1rem;
+}
+
+#porcentbar{
+  background-color: #39bceb;
+  height: 15px;
+}
+
+/* modal*/
+
+.bgnone{
+  display: none;
+}
+
+.opt{
+  display: flex;
+  justify-content: center;
+}
+.editarImg {
+  background-color: #36393e;
+  border: solid;
+  color: #da3e18;
+  margin-bottom: 1rem;
+}

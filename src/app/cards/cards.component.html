@@ -1,0 +1,24 @@
+
+
+<div class="cont">
+
+  <div *ngFor="let art of articulos " class="card ">
+    <a [routerLink]="['/card', art.id]">
+      <img [src]="art.data.link" class="card-img-top" alt="...">
+    </a>
+
+      <div class="card-body">
+        <h5 class="card-title">{{art.data.titulo}}</h5>
+        <p class="card-text">{{art.data.descripcion}}</p>
+      </div>
+
+        <a (click)="setId(art.id)"  class="btn btn-p" [routerLink]="['/card', art.id]">Ver más ...</a>
+
+        <div *ngIf="clave" class="buttons">
+          <input class="button green" (click)="editar(art.id)" type="button" value="Editar">
+          <input class="button red" (click)="eliminar(art.id)" type="button" value="Borrar">
+        </div>
+  </div>
+</div>
+
+

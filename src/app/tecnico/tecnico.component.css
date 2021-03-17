@@ -1,0 +1,93 @@
+
+
+.card {
+  font-family:  system-ui;
+  margin: 2rem auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  position: relative;
+  z-index: 101;
+}
+.card-body{
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.card-title{
+  font-size: calc(1.375rem + 1.5vw);
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: .5rem;
+  color: #212529;
+}
+.card-subtitle{
+  color: #6c757d!important;
+  font-size: 2rem;
+}
+
+/*/////////////////////////////////////*/
+.slider{
+  position: relative;
+  overflow: hidden;
+}
+
+ul{
+  display: flex;
+  font-size: larger;
+  width: 400%;
+
+  animation: textDesl 21s infinite;
+}
+li{
+  font-family:  system-ui;
+  font-size: larger;
+  width: 100%;
+  height: 6rem;
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes textDesl {
+  0% {margin-left: 0;}
+  21% {margin-left: 0;}
+
+  23% {margin-left: -100%;}
+  55% {margin-left: -100%;}
+
+  57% {margin-left: -200%;}
+  88% {margin-left: -200%;}
+
+  90% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+
+}
+
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 90%;
+  }
+  .card-title{
+    font-size: 2rem;
+  }
+  .card-subtitle{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 80%;
+  }
+  .card-title{
+    font-size: 1.5rem;
+  }
+  .card-subtitle{
+    font-size: 1.15rem;
+  }
+}
+
