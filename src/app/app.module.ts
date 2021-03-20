@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment.prod';
 import { AdminComponent } from './admin/admin.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +32,10 @@ import { TiendaComponent } from './tienda/tienda.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

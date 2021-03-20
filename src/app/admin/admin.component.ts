@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-//import { PicthServiceService } from '../service/picth-service.service';
+import { PitchServicesService }  from '../pitch-services.service';
 
 @Component({
   selector: 'app-admin',
@@ -27,12 +27,12 @@ export class AdminComponent implements OnInit {
 
 
 
-  constructor(/* private picthSer :PicthServiceService */) {}
+  constructor( private picthSer :PitchServicesService ) {}
 
   ngOnInit(): void {}
 
   handleImg(ev:any): void {
-   /*  this.picthSer.uploadImage(ev)
+    this.picthSer.uploadImage(ev)
     this.uploadPercent = this.picthSer.task.percentageChanges();
     this.picthSer.task.snapshotChanges().pipe(
       finalize(() => {
@@ -40,7 +40,7 @@ export class AdminComponent implements OnInit {
           this.linnkImg = urlImage
         })
       })
-    ).subscribe() */
+    ).subscribe()
   }
 
   addArticulos(){
@@ -53,9 +53,9 @@ export class AdminComponent implements OnInit {
       link: this.linnkImg,
       descripcion
     }
- /*    this.picthSer.postArticulo(newData).then(() => {
+    this.picthSer.postArticulo(newData).then(() => {
       this.clear()
-    }) */
+    })
   }
 
   clear(){

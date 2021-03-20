@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-//import { PicthServiceService } from '../service/picth-service.service'
+import { PitchServicesService } from '../pitch-services.service'
 
 @Component({
   selector: 'app-cards',
@@ -13,10 +13,10 @@ export class CardsComponent implements OnInit {
   @Input() funt?:any;
   articulos:any[] = [];
 
-  constructor(/* private picthSer:PicthServiceService */) { }
+  constructor(private picthSer:PitchServicesService) { }
 
   ngOnInit(): void {
-    /* this.picthSer.getArticulos().subscribe((snap) => {
+    this.picthSer.getArticulos().subscribe((snap) => {
       this.articulos = [];
       snap.forEach((arti:any) => {
         this.articulos.push({
@@ -29,7 +29,7 @@ export class CardsComponent implements OnInit {
       if (this.filtro) {
         this.articulos = this.articulos.filter(ele => ele.data.pagina == this.filtro)
       }
-    }); */
+    });
   }
   ordenar(){
     this.articulos.sort(function (a, b) {
@@ -44,23 +44,23 @@ export class CardsComponent implements OnInit {
   }
 
   setId(id:string){
-   // this.picthSer.handleId(id)
+    this.picthSer.handleId(id)
   }
 
   editar(id:string){
-   /*  this.picthSer.handleId(id)
+    this.picthSer.handleId(id)
 
     this.picthSer.getArticulo(id).subscribe((snapArt) => {
       this.picthSer.articulo = snapArt.payload.data();
       this.funt()
-    }) */
+    })
   }
 
   eliminar(id:string){
     let ok = confirm('Desea Eliminar este Articulo?')
-  /*   if (ok) {
+    if (ok) {
       this.picthSer.deleteArticulo(id)
-    } */
+    }
   }
 
 }

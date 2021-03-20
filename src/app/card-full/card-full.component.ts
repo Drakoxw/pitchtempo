@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-//import { PicthServiceService } from '../service/picth-service.service';
+import { PitchServicesService } from '../pitch-services.service'
 
 @Component({
   selector: 'app-card-full',
@@ -11,32 +11,43 @@ export class CardFullComponent implements OnInit {
 
 
   public card:any[] = [];
-  //private idCard:string;
+  public articulos:any[] = [];
+  private idCard:string;
 
   @Input() modo?:string;
   @Input() IdCardEd?:string;
 
   constructor(
-    /* private picthSer: PicthServiceService,
-    private route:ActivatedRoute */
+    private picthSer: PitchServicesService,
+    private route:ActivatedRoute
   ) {
-    /* this.idCard = this.picthSer.idC;
+    this.idCard = this.picthSer.idC;
       route.params.subscribe( data => {
         this.idCard = data['id']
       });
-      if (this.IdCardEd) {
-        console.log('from constructor',this.IdCardEd);
-      } */
     }
 
 
   ngOnInit(): void {
-   /*  this.picthSer.getArticulo(this.idCard).subscribe((snapCard) => {
+    this.picthSer.getArticulo(this.idCard).subscribe((snapCard) => {
       this.card.push({
         data: snapCard.payload.data()
       });
     });
-    console.log('from constructor',this.IdCardEd);
- */
+
+    this.picthSer.getArticulos().subscribe((snap) => {
+      this.articulos = [];
+      snap.forEach((arti:any) => {
+        this.articulos.push({
+          index: arti.payload.doc.data().indice ,
+          id : arti.payload.doc.id,
+          data : arti.payload.doc.data()
+        });
+      })
+      if (this.card) {
+        this.articulos = this.articulos.filter(ele => ele.data.pagina == 'ventas')
+      }
+    });
+
   }
 }

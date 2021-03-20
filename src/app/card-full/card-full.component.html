@@ -21,4 +21,16 @@
     </div>
   </div>
 
+  <div class="relacionados" style="display: flex;">
+    <div *ngFor="let item of articulos" class="minicontent">
+      <div class="img">
+        <img [src]="item.data.link" alt="">
+      </div>
+      <div class="desc">
+        <h2>{{item.data.titulo}}</h2>
+        <h3>{{item.data.subtitulo}}</h3>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDqKUcVDQt-QIfzaXadvoPuKugSYUfeODM",
+    authDomain: "picth-tempo.firebaseapp.com",
+    projectId: "picth-tempo",
+    storageBucket: "picth-tempo.appspot.com",
+    messagingSenderId: "84599358862",
+    appId: "1:84599358862:web:647277ff7638ae09f0d0df",
+    measurementId: "G-P2PP60BLMQ"
+  }
 };
 
 /*

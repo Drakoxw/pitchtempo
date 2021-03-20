@@ -28,6 +28,20 @@
   font-size: 2rem;
 }
 
+.main{
+  font-family:  system-ui;
+  position: relative;
+  background-color: #6c757d;
+}
+.main h3{
+  font-size: 400%;
+  font-weight: 700;
+}
+.main ul {
+  margin-left: 2rem;
+  display: flex;
+}
+
 @media screen and (max-width: 630px) {
   .card {
     width: 90%;
