@@ -30,9 +30,12 @@
 
 .main{
   padding: 1rem;
-  font-family:  system-ui;
+  font-family: system-ui;
   position: relative;
-  background-color: #6c757d;
+  background-image: url("../../assets/001.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .main ul {
@@ -64,6 +67,12 @@
   padding: 7px;
   text-align: center;
   display: inline-grid;
+}
+.lista ul{display: flex;margin: 3px 0;}
+.lista img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 .titulo h3{
   font-size: 2rem;
