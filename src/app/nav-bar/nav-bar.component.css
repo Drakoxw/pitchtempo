@@ -83,8 +83,11 @@ address{
   margin-left: 3rem;
 }
 address a{
-  color:#bb432a;
+  color: #bb432a;
+  align-items: center;
   font-size: 1.3rem;
+  text-decoration: none;
+  display: flex;
 }
 
 .redes{
@@ -118,6 +121,14 @@ address a{
 }
 .m-h{
   display: none;
+}
+
+.min-icono{
+  width: 24px;
+  height: 24px;
+  background-color: #bb432a;
+  padding: 2px;
+  border-radius: 50%;
 }
 
 /*//////////////////////menu h/////////////////////////////////////*/

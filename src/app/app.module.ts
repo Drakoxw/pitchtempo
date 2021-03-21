@@ -35,7 +35,7 @@ import { TiendaComponent } from './tienda/tienda.component';
     AppRoutingModule,
     FormsModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,18 +29,69 @@
 }
 
 .main{
+  padding: 1rem;
   font-family:  system-ui;
   position: relative;
   background-color: #6c757d;
 }
-.main h3{
-  font-size: 400%;
-  font-weight: 700;
-}
+
 .main ul {
   margin-left: 2rem;
   display: flex;
 }
+
+.cont-anim{
+  margin: 0 auto;
+  width: fit-content;
+  padding: 12px;
+  border: solid 4px black;
+}
+.cont-anim .subt{
+  text-align: center;
+  width: 100%;
+  color:#a4c61e;
+  background-color: black;
+  padding: 4px 18px;
+  transition: .5s ease all;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+.cont-anim .subt:hover{
+  background-color:#39bceb;
+  color:white;
+}
+.lista{
+  padding: 7px;
+  text-align: center;
+  display: inline-grid;
+}
+.titulo h3{
+  font-size: 2rem;
+  font-family: monospace;
+  margin-bottom: 10px;
+  width: fit-content;
+  position: relative;
+}
+.titulo span{
+  position: absolute;
+  right: 0;
+  width: 0;
+  background-color: #6c757d;
+  color: black;
+  border-left: 2px solid black;
+
+  animation: maquina 8s infinite steps(21);
+}
+
+@keyframes maquina {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
 
 @media screen and (max-width: 630px) {
   .card {

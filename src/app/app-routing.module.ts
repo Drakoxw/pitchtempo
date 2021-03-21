@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'servicio-tecnico', component:TecnicoComponent},
   {path:'admin', component:AdminComponent},
   {path:'card/:id', component:CardFullComponent},
-  {path:'**', component:HomeComponent}
+  {path:'**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
