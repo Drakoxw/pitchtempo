@@ -32,6 +32,7 @@
   padding: 1rem;
   font-family: system-ui;
   position: relative;
+  background-color: white;
   background-image: url("../../assets/001.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -46,8 +47,11 @@
 .cont-anim{
   margin: 0 auto;
   width: fit-content;
-  padding: 12px;
   border: solid 4px black;
+}
+.subcont{
+  padding-bottom: 9px;
+
 }
 .cont-anim .subt{
   text-align: center;
@@ -64,17 +68,25 @@
   color:white;
 }
 .lista{
+  background-color: rgba(255,255,255,0.5);
   padding: 7px;
   text-align: center;
   display: inline-grid;
 }
-.lista ul{display: flex;margin: 3px 0;}
+.lista ul{
+  display: flex;
+  margin: 3px 0;
+  border-bottom: solid 1px;
+}
 .lista img{
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  border: solid 2px #039be5;
+  border-radius: 50%;
+  height: 35px;
   margin-right: 10px;
 }
 .titulo h3{
+  margin: 5px;
   font-size: 2rem;
   font-family: monospace;
   margin-bottom: 10px;
@@ -85,7 +97,7 @@
   position: absolute;
   right: 0;
   width: 0;
-  background-color: #6c757d;
+  background-color: white;
   color: black;
   border-left: 2px solid black;
 

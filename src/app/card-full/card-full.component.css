@@ -1,6 +1,6 @@
 
 .cardfull, .relacionados{
-  font-family:  system-ui;
+  font-family: system-ui,-apple-system;
   margin: 2rem;
   background-color: #fff;
 
@@ -60,6 +60,13 @@
 .minicontent .img{
   width: 100%;
   padding: 0%;
+}
+h5 {
+  font-family:system-ui,-apple-system ;
+}
+
+.relacionados{
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 845px) {

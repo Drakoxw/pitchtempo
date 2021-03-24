@@ -93,7 +93,6 @@ address a{
 .redes{
   align-self: center;
   justify-content: flex-end;
-  margin-right: 2rem;
   margin-left: auto;
   font-size: 1rem;
 }
@@ -210,4 +209,17 @@ address a{
   a{
     font-size: 1rem;
   }
+  .img-fondo{
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 345px) {
+  .spanredes {
+    display: none;
+  }
+  .redes{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
 }
