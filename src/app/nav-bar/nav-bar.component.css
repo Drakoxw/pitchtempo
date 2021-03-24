@@ -83,7 +83,7 @@ address{
   margin-left: 3rem;
 }
 address a{
-  color: #bb432a;
+  color: #e63b12;
   align-items: center;
   font-size: 1.3rem;
   text-decoration: none;
@@ -98,7 +98,7 @@ address a{
   font-size: 1rem;
 }
 .redes a {
-  color:#bb432a;
+  color: #e63b12;
   font-size: 1.7rem;
 }
 .ul, .ulred{
@@ -126,7 +126,7 @@ address a{
 .min-icono{
   width: 24px;
   height: 24px;
-  background-color: #bb432a;
+  background-color: #e63b12;
   padding: 2px;
   border-radius: 50%;
 }
