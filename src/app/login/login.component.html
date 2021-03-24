@@ -1,0 +1,18 @@
+
+
+<app-menu-h></app-menu-h>
+
+<div class="content" >
+  <div class="for">
+    <form>
+      <label class="lab" for="correo">Email</label>
+      <input type="text" class="inp x" id="correo" name="correo" [(ngModel)]="correo" >
+      <label class="lab" for="pass">Contraseña</label>
+      <input type="text" class="inp" id="pass" name="pass" [(ngModel)]="pass" >
+
+      <input type="submit" class="get" value="Login" (click)="login()">
+    </form>
+  </div>
+
+</div>
+

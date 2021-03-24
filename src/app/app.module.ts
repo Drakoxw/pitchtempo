@@ -16,6 +16,7 @@ import { MenuHComponent } from './menu-h/menu-h.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TecnicoComponent } from './tecnico/tecnico.component';
 import { TiendaComponent } from './tienda/tienda.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TiendaComponent } from './tienda/tienda.component';
     MenuHComponent,
     TecnicoComponent,
     CardFullComponent,
-    CardsComponent
+    CardsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
