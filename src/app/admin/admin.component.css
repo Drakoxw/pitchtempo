@@ -68,3 +68,18 @@ textarea {width: 100%;}
   color: #da3e18;
   margin-bottom: 1rem;
 }
+
+.redes2 {
+  display: flex;
+  justify-content: center;
+}
+.close {
+  padding: 9px;
+  background-color: #39bceb;
+  border-radius: 16px;
+  color: white;
+  width: 50%;
+  border-color: white;
+  margin-bottom: 16px;
+  font-weight: 700;
+}

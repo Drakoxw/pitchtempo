@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { LoginSService } from '../login/login-s.service';
 import { PitchServicesService }  from '../pitch-services.service';
 
 @Component({
@@ -27,9 +28,11 @@ export class AdminComponent implements OnInit {
 
 
 
-  constructor( private picthSer :PitchServicesService ) {}
+  constructor( private picthSer :PitchServicesService, private loginSer:LoginSService ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loginSer.check()
+  }
 
   handleImg(ev:any): void {
     this.picthSer.uploadImage(ev)
@@ -69,5 +72,8 @@ export class AdminComponent implements OnInit {
   modEditar(){
    /*  this.articulo = this.picthSer.articulo
     console.log(this.articulo); */
+  }
+  cerrarSec(){
+    this.loginSer.logout()
   }
 }

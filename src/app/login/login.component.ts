@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,14 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  errorMessage = '';
   correo!:string
   pass!:string
 
-  constructor() { }
+
+  constructor(
+    private afAuth: AngularFireAuth,
+    private router: Router,
+    private ngZone: NgZone
+    ) { }
 
   ngOnInit(): void {
+    this.afAuth.user.subscribe(user => {
+      if (user) {
+        this.ngZone.run(() => {
+          this.router.navigate(['/admin']);
+        })
+      }
+    })
   }
 
-  login(){}
+  login(){
+    this.afAuth.signInWithEmailAndPassword(this.correo, this.pass)
+      .then(resp => {
+        console.log(resp);
+        this.afAuth.idToken
+        this.router.navigate(['/admin']);
+      })
+  }
+
+  logout(){
+    this.afAuth.signOut().then(res => {
+      this.router.navigate(['/']);
+    })
+  }
 
 }
