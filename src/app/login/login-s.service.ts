@@ -24,12 +24,10 @@ export class LoginSService {
   }
   check(){
     this.afAuth.user.subscribe(user => {
-      if (!user) {
-        //this.userlog = user
-
-        this.ngZone.run(() => {
-          this.router.navigate(['/']);
-        })
+      if (user) {
+        this.userlog = user
+      } else {
+        this.userlog = null
       }
     })
   }

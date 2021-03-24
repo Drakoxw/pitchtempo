@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { LoginSService } from './login-s.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private loginSer: LoginSService
     ) { }
 
   ngOnInit(): void {
@@ -33,8 +35,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.afAuth.signInWithEmailAndPassword(this.correo, this.pass)
       .then(resp => {
-        console.log(resp);
-        this.afAuth.idToken
+        this.loginSer.userlog = resp
         this.router.navigate(['/admin']);
       })
   }
