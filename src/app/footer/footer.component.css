@@ -41,6 +41,19 @@
 .nav{
   color: #0d6efd;}
 
+.end{
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.end img{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-bottom: 1rem;
+}
 
 
 
