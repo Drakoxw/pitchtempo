@@ -11,7 +11,7 @@ export class SeoService {
   generarMeta(confi: any){
     confi = {
       tittle: "Picth tempo",
-      description: "mantenimiento, reparación y personalización de consolas y equipos DJ",
+      description: "Mantenimiento, reparación y personalización de consolas y equipos DJ",
       image: "../../assets/icno.png",
       slug: "",
       keywords: "",
@@ -31,6 +31,6 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: confi.title });
     this.meta.updateTag({ property: 'og:description', content: confi.description });
     this.meta.updateTag({ property: 'og:image', content: confi.image });
-    this.meta.updateTag({ property: 'og:url', content: `https://picth-tempo.web.app/${confi.slug​}` });
+    this.meta.updateTag({ property: 'og:url', content: `https://picthtempo.com/${confi.slug​}` });
   }
 }

@@ -20,7 +20,8 @@ export class TiendaComponent implements OnInit {
     this.seo.generarMeta({
       title: t,
       description: "Venta de consolas DJ nuevas o usadas, venta de repuestos picths, faders,pulsadores y knobs, importación de tarjetas y todo en repuestos originales.",
-      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento, Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores, Importación de repuestos"
+      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento, Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores, Importación de repuestos",
+      slug: "tienda"
     })
   }
 

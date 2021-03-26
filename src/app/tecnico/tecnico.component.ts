@@ -20,7 +20,8 @@ export class TecnicoComponent implements OnInit {
     this.seo.generarMeta({
       title: t,
       description: "Reparación por daños, humedad y mantenimiento preventivo, fabricamos cables a medida, personalización de consolas, skin para consolas y equipos DJ.",
-      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento, Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores, Importación de repuestos"
+      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento, Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores, Importación de repuestos",
+      slug: "servicio-tecnico"
     })
   }
 
