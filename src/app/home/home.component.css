@@ -108,9 +108,19 @@
 
   animation: maquina 8s infinite steps(21);
 }
+.addre{
+  margin-top: 13px;
+  border-top: solid 1px;
+}
 .sp{
   background-color: black;
   display: flex;
+}
+.ver {
+  color: black;
+}
+.ver:visited {
+  color: black;
 }
 
 @keyframes maquina {
@@ -151,5 +161,13 @@
   }
   .card-subtitle{
     font-size: 1.15rem;
+  }
+  .titulo h3{
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .titulo h3{
+    font-size: 1.6rem;
   }
 }

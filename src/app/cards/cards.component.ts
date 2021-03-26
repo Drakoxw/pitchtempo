@@ -12,6 +12,7 @@ export class CardsComponent implements OnInit {
   @Input() filtro?:string;
   @Input() funt?:any;
   articulos:any[] = [];
+  linkC:string = 'https://picthtempo.com/card/'
 
   constructor(private picthSer:PitchServicesService) { }
 
