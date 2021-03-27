@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { LoginSService } from './login-s.service';
+import { NoSeoService } from '../no-seo.service'
 
 @Component({
   selector: 'app-login',
@@ -19,10 +20,12 @@ export class LoginComponent implements OnInit {
     private afAuth: AngularFireAuth,
     private router: Router,
     private ngZone: NgZone,
-    private loginSer: LoginSService
+    private loginSer: LoginSService,
+    private noseo:NoSeoService
     ) { }
 
   ngOnInit(): void {
+    this.noseo.generarNoSeo();
     this.afAuth.user.subscribe(user => {
       if (user) {
         this.ngZone.run(() => {

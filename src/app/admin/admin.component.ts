@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { LoginSService } from '../login/login-s.service';
 import { PitchServicesService }  from '../pitch-services.service';
+import { NoSeoService } from '../no-seo.service'
 
 @Component({
   selector: 'app-admin',
@@ -28,10 +29,15 @@ export class AdminComponent implements OnInit {
 
 
 
-  constructor( private picthSer :PitchServicesService, private loginSer:LoginSService ) {}
+  constructor(
+    private picthSer :PitchServicesService,
+    private loginSer:LoginSService,
+    private noseo:NoSeoService
+  ) {}
 
   ngOnInit(): void {
-    this.loginSer.check()
+    this.noseo.generarNoSeo();
+    this.loginSer.check();
   }
 
   handleImg(ev:any): void {
