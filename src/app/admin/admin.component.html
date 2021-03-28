@@ -46,6 +46,29 @@
           <label for="indice">Indice</label>
           <input type="text" name="indice" id="indice" placeholder="Numero de prioridad- a menor # mayor prioridad" [(ngModel)]="articulo.indice">
           <label for="subt">Subtitulo</label>
+
+          <div class="sel">
+            <label for="select2">Tipo </label>
+            <select name="select2" [(ngModel)]="articulo.tipo">
+              <option value="cables" >Cables</option>
+              <option value="cover" >Cover</option>
+              <option value="accesorios" >Accesorios</option>
+              <option value="tarjetas" >Tarjetas</option>
+              <option value="picth" >Picth</option>
+              <option value="pulsadores" >Pulsadores</option>
+              <option value="nobs" >Nobs</option>
+              <option value="faders" >Faders</option>
+              <option value="fuentes" >Fuentes</option>
+              <option value="board" >Boards</option>
+              <option value="cable-audifono" >Cables Audifonos</option>
+              <option value="almohadillas" >Almohadillas</option>
+              <option value="bases-pc" >Bases PC</option>
+              <option value="audifonos" >Audifonos</option>
+              <option value="">Cerrar</option>
+            </select>
+          </div>
+
+
           <input type="text" name="subtitulo" id="subtitulo" [(ngModel)]="articulo.subtitulo">
           <label for="precio">Precio</label>
           <input type="text" name="precio" id="precio" [(ngModel)]="articulo.precio">

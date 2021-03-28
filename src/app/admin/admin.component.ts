@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
   linnkImg!:string;
   articulos!:any;
   articulo = {
-    subtitulo : '', pagina: '', indice: '', titulo: '', descripcion:'', precio: ''
+    subtitulo : '', pagina: '', indice: '', titulo: '', descripcion:'', precio: '', tipo: ''
   }
 
 
@@ -53,11 +53,12 @@ export class AdminComponent implements OnInit {
   }
 
   addArticulos(){
-    const { pagina, indice, titulo, subtitulo, descripcion, precio } = this.articulo
+    const { pagina, indice, titulo, subtitulo, descripcion, precio, tipo } = this.articulo
     const newData = {
       indice,
       pagina,
       titulo,
+      tipo,
       precio,
       subtitulo,
       link: this.linnkImg,
@@ -69,7 +70,7 @@ export class AdminComponent implements OnInit {
   }
 
   clear(){
-    this.articulo = {pagina: '', indice: '', titulo: '', subtitulo : '', descripcion:'', precio:''}
+    this.articulo = {pagina: '', indice: '', titulo: '', subtitulo : '', descripcion:'', precio:'', tipo:''}
     this.inputimg.nativeElement.value = ''
     this.linnkImg = '';
     this.uploadPercent = null

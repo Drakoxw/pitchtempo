@@ -2,7 +2,7 @@
 
 <div class="cont">
 
-  <div itemscope itemtype="https://schema.org/Article" *ngFor="let art of articulos " class="card ">
+  <div itemscope itemtype="https://schema.org/Product" *ngFor="let art of articulos " class="card ">
     <article>
       <a [routerLink]="['/card', art.id]">
         <img itemprop="image" [src]="art.data.link" class="card-img-top" alt={{art.data.subtitulo}}>
@@ -12,6 +12,21 @@
         <h5 itemprop="name" class="card-title">{{art.data.titulo}}</h5>
         <p itemprop="description" class="card-text">{{art.data.descripcion}}</p>
       </div>
+
+      <div  class="oc" style="display: none;">
+        <p class="card-text">{{art.data.descripcion}}</p>
+        <div >
+          <span >Picth Tempo</span>
+        </div>
+
+        <div itemprop="review" itemscope itemtype="https://schema.org/Review">
+          <span itemprop="name">{{art.data.titulo}}</span>
+          <span itemprop="author">Picth Tempo</span>
+          <p class="card-text">{{art.data.descripcion}}</p>
+        </div>
+
+      </div>
+
 
       <span itemprop="url" style="display: none;">{{linkC+art.id}}</span>
       <a (click)="setId(art.id)"  class="btn btn-p" [routerLink]="['/card', art.id]">Ver más ...</a>
