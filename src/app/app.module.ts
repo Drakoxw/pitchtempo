@@ -18,6 +18,17 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TecnicoComponent } from './tecnico/tecnico.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { LoginComponent } from './login/login.component';
+import { XimportTarjetasComponent } from './ximport-tarjetas/ximport-tarjetas.component';
+import { XdanoMantenmtComponent } from './xdano-mantenmt/xdano-mantenmt.component';
+import { XNuevosUsadosComponent } from './x-nuevos-usados/x-nuevos-usados.component';
+import { XDanoManteniComponent } from './xdano-manteni/xdano-manteni.component';
+import { XDanoMantenimComponent } from './x-dano-mantenim/x-dano-mantenim.component';
+import { XImportTarjetasComponent } from './x-import-tarjetas/x-import-tarjetas.component';
+import { XCoversComponent } from './x-covers/x-covers.component';
+import { XCablesFactComponent } from './x-cables-fact/x-cables-fact.component';
+import { XSkinEquiposComponent } from './x-skin-equipos/x-skin-equipos.component';
+import { XAccesoriosComponent } from './x-accesorios/x-accesorios.component';
+import { XPicthPulsadComponent } from './x-picth-pulsad/x-picth-pulsad.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +42,18 @@ import { LoginComponent } from './login/login.component';
     TecnicoComponent,
     CardFullComponent,
     CardsComponent,
-    LoginComponent
+    LoginComponent,
+    XimportTarjetasComponent,
+    XdanoMantenmtComponent,
+    XNuevosUsadosComponent,
+    XDanoManteniComponent,
+    XDanoMantenimComponent,
+    XImportTarjetasComponent,
+    XCoversComponent,
+    XCablesFactComponent,
+    XSkinEquiposComponent,
+    XAccesoriosComponent,
+    XPicthPulsadComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
