@@ -14,7 +14,7 @@
       </div>
 
       <div  class="oc" style="display: none;">
-        <p class="card-text">{{art.data.descripcion}}</p>
+        <p itemprop="description" class="card-text">{{art.data.descripcion}}</p>
         <div >
           <span >Picth Tempo</span>
         </div>
@@ -22,7 +22,7 @@
         <div itemprop="review" itemscope itemtype="https://schema.org/Review">
           <span itemprop="name">{{art.data.titulo}}</span>
           <span itemprop="author">Picth Tempo</span>
-          <p class="card-text">{{art.data.descripcion}}</p>
+          <p itemprop="reviewBody" class="card-text">Producto de Picth tempo Reparaciones</p>
         </div>
 
       </div>
@@ -36,6 +36,7 @@
         <input class="button red" (click)="eliminar(art.id)" type="button" value="Borrar">
       </div>
     </article>
+
 
   </div>
 </div>

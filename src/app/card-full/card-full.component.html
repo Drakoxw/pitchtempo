@@ -4,16 +4,27 @@
 
 
 <div id="card" class="cardfull" style="position: relative;">
-  <div class="content">
+  <div class="content" itemscope itemtype="https://schema.org/Product" >
 
     <div class="img">
-      <img  [src]="card[0].data.link" alt="">
+      <img itemprop="image" [src]="card[0].data.link" [alt]="card[0].data.titulo">
+    </div>
+
+    <div itemprop="review" itemscope itemtype="https://schema.org/Review" style="display: none;">
+      <span itemprop="name">{{card[0].data.titulo}}</span>
+      <span itemprop="author">Picth Tempo</span>
+      <p itemprop="reviewBody" class="card-text">Producto de Picth tempo Reparaciones</p>
     </div>
 
     <div class="card-body">
       <h1 class="card-title">{{card[0].data.titulo}}</h1>
       <h2 class="card-subtitle ">{{card[0].data.subtitulo}}</h2>
-      <p class="card-text">{{card[0].data.descripcion}}</p>
+      <p itemprop="description" class="card-text">{{card[0].data.descripcion}}</p>
+
+      <div style="display: none;" class="x">
+        <a itemprop="url" href="https://picthtempo.com/card/75hBfgkFpq5rhfCTq7Rf"></a>
+        <span itemprop="name" >Picth Tempo</span>
+      </div>
 
       <div class="foot">
         <a class="btn btn-primary" routerLink="/">Volver atrás</a>
@@ -34,5 +45,6 @@
       </div>
     </div>
   </div>
+
 
 </div>
