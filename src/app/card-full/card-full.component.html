@@ -22,7 +22,7 @@
       <p itemprop="description" class="card-text">{{card[0].data.descripcion}}</p>
 
       <div style="display: none;" class="x">
-        <a itemprop="url" href={{linkURL}},{{idCard}}></a>
+        <a itemprop="url" href={{linkURL}}></a>
         <span itemprop="name" >Picth Tempo</span>
       </div>
 
@@ -37,7 +37,7 @@
   <div class="relacionados" style="display: flex;flex-wrap: wrap;">
     <div *ngFor="let item of articulos" class="minicontent">
       <div class="img">
-        <img [src]="item.data.link" alt="">
+        <img [src]="item.data.link" [alt]="item.data.titulo">
       </div>
       <div class="desc">
         <h2>{{item.data.titulo}}</h2>

@@ -43,18 +43,8 @@ export class CardFullComponent implements OnInit {
       this.card.push({
         data: snapCard.payload.data()
       });
-      this.tituloSlug = this.card[0].data.titulo
+      this.tituloSlug = this.card[0].data.titulo.replace(/\s/g, '')
     });
-
-    let t:string = "Pitch Tempo Reparaciones"
-    this.title.setTitle(t)
-
-    this.seo.generarMeta({
-      title: `Pitch Tempo - Ventas`,
-      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
-      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores",
-      slug: `${this.tituloSlug}`
-    })
 
     this.picthSer.getArticulos().subscribe((snap) => {
       this.articulos = [];
@@ -68,10 +58,20 @@ export class CardFullComponent implements OnInit {
 
       if (this.card) {
         console.log(`this.linkURL`, this.linkURL);
-        console.log(`this.tituloSlug`, this.tituloSlug);
+        console.log(`this.tituloSlug:`, this.tituloSlug   )
         this.articulos = this.articulos.filter(ele => ele.data.tipo == this.card[0].data.tipo)
       }
     });
+
+    let t:string = "Pitch Tempo Venta - "+ this.card[0].data.tipo;
+    this.title.setTitle(t)
+
+    this.seo.generarMeta({
+      title: `Pitch Tempo - Ventas`,
+      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
+      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores",
+      slug: 'card/'+ this.tituloSlug
+    })
 
   }
 }
