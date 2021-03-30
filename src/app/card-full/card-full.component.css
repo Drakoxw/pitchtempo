@@ -30,6 +30,7 @@
 }
 .img img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .card-title{
@@ -52,15 +53,26 @@
 
 .minicontent{
   width: 10rem;
-  height: 10rem;
+  height: 15rem;
   margin: 10px;
   padding: 4px;
   border: solid 2px #a4c611;
   font-size: 70%;
+  border-radius: 15px;
+  overflow: auto;
+}
+.minicontent::-webkit-scrollbar {
+  display: none;
 }
 .minicontent .img{
   width: 100%;
   padding: 0%;
+}
+.desc{
+  padding: 5px;
+}
+.desc h3{
+  color: #a0a0a0;
 }
 h5 {
   font-family:system-ui,-apple-system ;
