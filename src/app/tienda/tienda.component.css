@@ -1,5 +1,8 @@
 
 
+.picth{
+  position: relative;
+}
 .list {
   width: 100%;
   display: flex;

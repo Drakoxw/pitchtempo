@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataGetPitch } from '../models/data-get-pitch';
 import { PitchServicesService } from '../pitch-services.service'
 
 @Component({
@@ -11,7 +12,7 @@ export class CardsComponent implements OnInit {
   @Input() clave?:string;
   @Input() filtro?:string;
   @Input() funt?:any;
-  articulos:any[] = [];
+  articulos:DataGetPitch[] = [];
   linkC:string = 'https://picthtempo.com/card/'
 
   constructor(private picthSer:PitchServicesService) { }

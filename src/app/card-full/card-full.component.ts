@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DataGetPitch } from '../models/data-get-pitch';
 import { PitchServicesService } from '../pitch-services.service'
 
 @Component({
@@ -11,8 +12,9 @@ export class CardFullComponent implements OnInit {
 
 
   public card:any[] = [];
-  public articulos:any[] = [];
+  public articulos:DataGetPitch[] = [];
   private idCard:string;
+  private tipo!:string;
 
   @Input() modo?:string;
   @Input() IdCardEd?:string;
@@ -45,7 +47,7 @@ export class CardFullComponent implements OnInit {
         });
       })
       if (this.card) {
-        this.articulos = this.articulos.filter(ele => ele.data.pagina == 'ventas')
+        this.articulos = this.articulos.filter(ele => ele.data.tipo == this.card[0].data.tipo)
       }
     });
 
