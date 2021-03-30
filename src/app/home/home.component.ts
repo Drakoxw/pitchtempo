@@ -9,8 +9,6 @@ import { SeoService } from '../seo.service';
 })
 export class HomeComponent implements OnInit {
 
-  text = 'NUESTROS PRODUCTOS : :'
-
   constructor(private title:Title, private seo:SeoService) { }
 
   ngOnInit(): void {
@@ -19,7 +17,7 @@ export class HomeComponent implements OnInit {
 
     this.seo.generarMeta({
       title: "Pitch Tempo Reparaciones",
-      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabriamos tus cables a medida.",
+      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
       keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores"
     })
 

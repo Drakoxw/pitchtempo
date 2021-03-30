@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataGetPitch } from '../models/data-get-pitch';
-import { PitchServicesService } from '../pitch-services.service'
+import { PitchServicesService } from '../pitch-services.service';
+import { Title } from '@angular/platform-browser';
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-card-full',
@@ -13,19 +15,22 @@ export class CardFullComponent implements OnInit {
 
   public card:any[] = [];
   public articulos:DataGetPitch[] = [];
-  private idCard:string;
-  private tipo!:string;
+  idCard:string;
+  linkURL!:string;
 
   @Input() modo?:string;
   @Input() IdCardEd?:string;
 
   constructor(
     private picthSer: PitchServicesService,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private title:Title,
+    private seo:SeoService
   ) {
     this.idCard = this.picthSer.idC;
       route.params.subscribe( data => {
         this.idCard = data['id']
+        this.linkURL = `https://picthtempo.com/card/${this.idCard}`
       });
     }
 
@@ -36,6 +41,15 @@ export class CardFullComponent implements OnInit {
         data: snapCard.payload.data()
       });
     });
+
+    let t:string = "Pitch Tempo Reparaciones"
+    this.title.setTitle(t)
+
+    this.seo.generarMeta({
+      title: `Pitch Tempo - Ventas`,
+      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
+      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores"
+    })
 
     this.picthSer.getArticulos().subscribe((snap) => {
       this.articulos = [];
