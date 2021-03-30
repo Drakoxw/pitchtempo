@@ -34,7 +34,7 @@
 
   <div class="text"><h5>RELACIONADOS:</h5></div>
 
-  <div class="relacionados" style="display: flex;">
+  <div class="relacionados" style="display: flex;flex-wrap: wrap;">
     <div *ngFor="let item of articulos" class="minicontent">
       <div class="img">
         <img [src]="item.data.link" alt="">
