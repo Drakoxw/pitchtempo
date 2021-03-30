@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XImportTarjetasComponent implements OnInit {
 
+  filtro = 'board'
+
   constructor() { }
 
   ngOnInit(): void {

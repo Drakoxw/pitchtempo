@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XNuevosUsadosComponent implements OnInit {
 
+  filtro = ''
+
   constructor() { }
 
   ngOnInit(): void {

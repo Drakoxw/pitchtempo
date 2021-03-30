@@ -29,7 +29,7 @@ export class CardsComponent implements OnInit {
       })
       this.ordenar()
       if (this.filtro) {
-        this.articulos = this.articulos.filter(ele => ele.data.pagina == this.filtro)
+        this.articulos = this.articulos.filter(ele => ele.data.tipo == this.filtro)
       }
     });
   }

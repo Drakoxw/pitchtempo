@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataGetPitch } from '../models/data-get-pitch';
 import { PitchServicesService } from '../pitch-services.service';
 import { Title } from '@angular/platform-browser';
@@ -25,6 +25,7 @@ export class CardFullComponent implements OnInit {
   constructor(
     private picthSer: PitchServicesService,
     private route:ActivatedRoute,
+    private router: Router,
     private title:Title,
     private seo:SeoService
   ) {
@@ -37,14 +38,14 @@ export class CardFullComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(`this.idCard`, this.idCard);
-    this.picthSer.getArticulo(this.idCard).subscribe((snapCard) => {
+    this.load()
 
-      this.card.push({
-        data: snapCard.payload.data()
-      });
-      this.tituloSlug = this.card[0].data.titulo.replace(/\s/g, '')
-    });
+    this.seo.generarMeta({
+      title: `Pitch Tempo - Ventas`,
+      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
+      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores",
+      slug: 'card/'+ this.tituloSlug
+    })
 
     this.picthSer.getArticulos().subscribe((snap) => {
       this.articulos = [];
@@ -57,8 +58,6 @@ export class CardFullComponent implements OnInit {
       })
 
       if (this.card) {
-        console.log(`this.linkURL`, this.linkURL);
-        console.log(`this.tituloSlug:`, this.tituloSlug   )
         this.articulos = this.articulos.filter(ele => ele.data.tipo == this.card[0].data.tipo)
       }
     });
@@ -66,12 +65,23 @@ export class CardFullComponent implements OnInit {
     let t:string = "Pitch Tempo Venta - "+ this.card[0].data.tipo;
     this.title.setTitle(t)
 
-    this.seo.generarMeta({
-      title: `Pitch Tempo - Ventas`,
-      description: "Reparación y mantenimiento de consolas DJ, venta de repuestos y consolas nuevas y usadas, importación de repuestos, fabricamos tus cables a medida.",
-      keywords: "Consolas DJ, Reparación, Ventas, Manteminiento,Skin de consolas, Fabricación de cables, Venta faders, Pichts, Pulsadores",
-      slug: 'card/'+ this.tituloSlug
-    })
+  }
 
+
+  load(){
+    this.picthSer.getArticulo(this.idCard).subscribe((snapCard) => {
+      this.card = []
+      this.card.push({
+        data: snapCard.payload.data()
+      });
+      this.tituloSlug = this.card[0].data.titulo.replace(/\s/g, '')
+    });
+  }
+
+  reload(url:string){
+    this.router.navigateByUrl(`/cables`, { skipLocationChange: true })
+    .then(() => {
+      this.router.navigate(['/card/'+ url]);
+    })
   }
 }

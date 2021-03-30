@@ -26,6 +26,9 @@ import { XImportTarjetasComponent } from './x-import-tarjetas/x-import-tarjetas.
 import { XNuevosUsadosComponent } from './x-nuevos-usados/x-nuevos-usados.component';
 import { XPicthPulsadComponent } from './x-picth-pulsad/x-picth-pulsad.component';
 import { XSkinEquiposComponent } from './x-skin-equipos/x-skin-equipos.component';
+import { XBasesLaptopComponent } from './x-bases-laptop/x-bases-laptop.component';
+import { XAudifonosComponent } from './x-audifonos/x-audifonos.component';
+import { TiendaPrincipalComponent } from './tienda-principal/tienda-principal.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { XSkinEquiposComponent } from './x-skin-equipos/x-skin-equipos.component
     XImportTarjetasComponent,
     XNuevosUsadosComponent,
     XPicthPulsadComponent,
-    XSkinEquiposComponent
+    XSkinEquiposComponent,
+    XBasesLaptopComponent,
+    XAudifonosComponent,
+    TiendaPrincipalComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

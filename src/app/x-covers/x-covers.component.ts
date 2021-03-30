@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XCoversComponent implements OnInit {
 
+  filtro = 'cover'
+
   constructor() { }
 
   ngOnInit(): void {
