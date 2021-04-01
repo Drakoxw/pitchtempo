@@ -84,6 +84,7 @@ h5 {
   background-color: #ffffff;
   color: black;
   justify-content: center;
+  height: 267px;
 }
 
 @media screen and (max-width: 845px) {

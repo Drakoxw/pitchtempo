@@ -57,6 +57,7 @@ a{
   opacity: 1;
   font-weight: 800;
   color: #39bceb;
+  font-family: 'Montserrat',sans-serif;
 }
 .container-nav {
   display: flex;

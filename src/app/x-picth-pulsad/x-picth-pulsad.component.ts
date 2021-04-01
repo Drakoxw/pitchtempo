@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XPicthPulsadComponent implements OnInit {
 
-  filtro = ''
+  filtro = 'pulsadores'
 
   constructor() { }
 

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XSkinEquiposComponent implements OnInit {
 
-  filtro = ''
+  filtro = 'equipos'
 
   constructor() { }
 
