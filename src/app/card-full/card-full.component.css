@@ -98,3 +98,44 @@ h5 {
   }
 
 }
+
+
+@media screen and (max-width: 630px) {
+  .card {
+    width: 90%;
+  }
+  .card-title{
+    font-size: 2rem;
+  }
+  .card-subtitle{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .cont-anim{
+    width: auto;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 80%;
+  }
+  .card-title{
+    font-size: 1.5rem;
+  }
+  .card-subtitle{
+    font-size: 1.15rem;
+  }
+  .titulo h3{
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .titulo h3{
+    font-size: 1.6rem;
+  }
+}
+

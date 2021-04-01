@@ -16,7 +16,7 @@
       <label for="select">Pagina a administrar: </label>
       <select name="select" [(ngModel)]="articulo.pagina">
         <option value="home" >Home</option>
-        <option value="accesorios" >accesorios y equipos</option>
+        <option value="accesorios" >Accesorios y equipos</option>
         <option value="servicio" >Servicio tecnico</option>
         <option value="repuestos" >Repuestos</option>
         <option value="">Cerrar</option>
@@ -45,7 +45,6 @@
           <input type="text" name="titulo" id="titulo" placeholder="Nombre o Titulo" [(ngModel)]="articulo.titulo">
           <label for="indice">Indice</label>
           <input type="text" name="indice" id="indice" placeholder="Numero de prioridad- a menor # mayor prioridad" [(ngModel)]="articulo.indice">
-          <label for="subt">Subtitulo</label>
 
           <div class="sel">
             <label for="select2">Tipo </label>
@@ -67,7 +66,7 @@
             </select>
           </div>
 
-
+          <label for="subt">Subtitulo</label>
           <input type="text" name="subtitulo" id="subtitulo" [(ngModel)]="articulo.subtitulo">
           <label for="precio">Precio</label>
           <input type="text" name="precio" id="precio" [(ngModel)]="articulo.precio">

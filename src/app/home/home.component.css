@@ -38,6 +38,7 @@
   margin-left: 2.5%;
   margin-right: 2.5%;
   border: groove;
+  margin-bottom: 2rem;
 }
 
 .main ul {
@@ -122,6 +123,25 @@
 .ver:visited {
   color: black;
 }
+/*-----------------------SEcciones------------------------------------*/
+.cont2{
+  text-align: center;
+}
+.cont3 {
+  display: list-item;
+  justify-content: center;
+}
+.cont2 h3 {
+  background-color: gold;
+  color: #fff;
+  padding: 1rem;
+  font-family: system-ui;
+  font-size: 145%;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 33px;
+}
+
 
 @keyframes maquina {
   from {

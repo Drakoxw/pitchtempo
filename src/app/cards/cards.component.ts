@@ -11,6 +11,7 @@ export class CardsComponent implements OnInit {
 
   @Input() clave?:string;
   @Input() filtro?:string;
+  @Input() filtro2?:string;
   @Input() funt?:any;
   articulos:DataGetPitch[] = [];
   linkC:string = 'https://picthtempo.com/card/'
@@ -30,6 +31,9 @@ export class CardsComponent implements OnInit {
       this.ordenar()
       if (this.filtro) {
         this.articulos = this.articulos.filter(ele => ele.data.tipo == this.filtro)
+      }
+      if (this.filtro2) {
+        this.articulos = this.articulos.filter(ele => ele.data.pagina == this.filtro2)
       }
     });
   }
