@@ -12,7 +12,7 @@
   </div>
 
   <div class="card-body">
-    <div class="sel">
+    <div class="sel" style="border: none;">
       <label for="select">Pagina a administrar: </label>
       <select name="select" [(ngModel)]="articulo.pagina">
         <option value="home" >Home</option>
@@ -30,7 +30,7 @@
     <div class="form-g" *ngIf="articulo.pagina">
       <form (ngSubmit)="addArticulos()">
         <label for="imagen">Imagen</label>
-        <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg($event)">
+        <input type="file" accept=".png, .jpg, .jpeg, .webp " #inputimg name="imagen" id="imagen" (change)="handleImg($event)">
 
           <div id="porcent" *ngIf="uploadPercent" >{{ uploadPercent | async }} % </div>
           <div id="porcentbar" role="progressbar" *ngIf="uploadPercent" [style.width]="(uploadPercent | async)+'%'" ></div>
@@ -89,7 +89,7 @@
               <div class="op1" style="display: flex;text-align: center;">
                 <div class="pd1r" style="width: 50%;border: 1px solid">
                   <label for="subt">Imagen 1</label>
-                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg1($event)">
+                  <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg1($event)">
                   <div id="porcent" *ngIf="uploadPercent1" >{{ uploadPercent1 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent1" [style.width]="(uploadPercent1 | async)+'%'" ></div>
                   <label for="precio">Referencia 1</label>
@@ -99,7 +99,7 @@
 
                 <div class="pd1r" style="width: 50%;border: 1px solid">
                   <label for="subt">Imagen 2</label>
-                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg2($event)">
+                  <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg2($event)">
                   <div id="porcent" *ngIf="uploadPercent2" >{{ uploadPercent2 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent2" [style.width]="(uploadPercent2 | async)+'%'" ></div>
                   <label for="precio">Referencia 2</label>
@@ -112,7 +112,7 @@
               <div class="op2" style="display: flex; text-align: center;">
                 <div class="pd1r" style="width: 50%;border: 1px solid">
                   <label for="subt">Imagen 3</label>
-                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg3($event)">
+                  <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg3($event)">
                   <div id="porcent" *ngIf="uploadPercent3" >{{ uploadPercent3 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent3" [style.width]="(uploadPercent3 | async)+'%'" ></div>
                   <label for="precio">Referencia 3</label>
@@ -122,7 +122,7 @@
 
                 <div class="pd1r" style="width: 50%;border: 1px solid">
                   <label for="subt">Imagen 4</label>
-                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg4($event)">
+                  <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg4($event)">
                   <div id="porcent" *ngIf="uploadPercent4" >{{ uploadPercent4 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent4" [style.width]="(uploadPercent4 | async)+'%'" ></div>
                   <label for="precio">Referencia 4</label>
@@ -134,7 +134,7 @@
 
               <div class="pd1r img5" >
                 <label for="subt">Imagen 5</label>
-                <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg5($event)">
+                <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg5($event)">
                 <div id="porcent" *ngIf="uploadPercent5" >{{ uploadPercent5 | async }} % </div>
                 <div id="porcentbar" role="progressbar" *ngIf="uploadPercent5" [style.width]="(uploadPercent5 | async)+'%'" ></div>
                 <label for="precio">Referencia 5</label>

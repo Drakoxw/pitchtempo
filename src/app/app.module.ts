@@ -29,6 +29,7 @@ import { XSkinEquiposComponent } from './x-skin-equipos/x-skin-equipos.component
 import { XBasesLaptopComponent } from './x-bases-laptop/x-bases-laptop.component';
 import { XAudifonosComponent } from './x-audifonos/x-audifonos.component';
 import { TiendaPrincipalComponent } from './tienda-principal/tienda-principal.component';
+import { MinRefCardComponent } from './min-ref-card/min-ref-card.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { TiendaPrincipalComponent } from './tienda-principal/tienda-principal.co
     XSkinEquiposComponent,
     XBasesLaptopComponent,
     XAudifonosComponent,
-    TiendaPrincipalComponent
+    TiendaPrincipalComponent,
+    MinRefCardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

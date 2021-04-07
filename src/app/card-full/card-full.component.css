@@ -87,6 +87,27 @@ h5 {
   height: 267px;
 }
 
+.cont-ref{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid red;
+  margin: 1rem 0;
+  justify-content: space-evenly;
+  border-radius: 24px;
+}
+.ref-card{
+  width: 100px;
+  height: auto;
+}
+.ref-card img{
+  width: 90px;
+  height: auto;
+}
+.mt1{
+  margin-top: 1rem;
+}
+
 @media screen and (max-width: 845px) {
   .content{
     flex-direction: column;

@@ -19,12 +19,49 @@
     <div class="card-body">
       <h1 class="card-title">{{card[0].data.titulo}}</h1>
       <h2 class="card-subtitle ">{{card[0].data.subtitulo}}</h2>
-      <p itemprop="description" class="card-text">{{card[0].data.descripcion}}</p>
+      <div class="color mt1" *ngIf="card[0].data.color">
+        <h5>Colores Disponibles</h5>
+        <p>{{card[0].data.color}}</p>
+      </div>
+      <p itemprop="description" class="card-text mt1">{{card[0].data.descripcion}}</p>
+
 
       <div style="display: none;" class="x">
         <a itemprop="url" href={{linkURL}}></a>
         <span itemprop="name" >Picth Tempo</span>
       </div>
+
+     <!--  <hr class="mt1"> -->
+      <h3 class="mt1">Más Referencias:</h3>
+      <div class="cont-ref">
+
+        <div class="ref-card" *ngIf="card[0].data.mas.linkImg1">
+          <h4>{{card[0].data.mas.desc1}}</h4>
+          <img [src]="card[0].data.mas.linkImg1" [alt]="card[0].data.mas.desc1">
+        </div>
+
+        <div class="ref-card" *ngIf="card[0].data.mas.linkImg2">
+          <h4>{{card[0].data.mas.desc2}}</h4>
+          <img [src]="card[0].data.mas.linkImg2" [alt]="card[0].data.mas.desc2">
+        </div>
+
+        <div class="ref-card" *ngIf="card[0].data.mas.linkImg3">
+          <h4>{{card[0].data.mas.desc3}}</h4>
+          <img [src]="card[0].data.mas.linkImg3" [alt]="card[0].data.mas.desc3">
+        </div>
+
+        <div class="ref-card" *ngIf="card[0].data.mas.linkImg4">
+          <h4>{{card[0].data.mas.desc4}}</h4>
+          <img [src]="card[0].data.mas.linkImg4" [alt]="card[0].data.mas.desc4">
+        </div>
+
+        <div class="ref-card" *ngIf="card[0].data.mas.linkImg5">
+          <h4>{{card[0].data.mas.desc5}}</h4>
+          <img [src]="card[0].data.mas.linkImg5" [alt]="card[0].data.mas.desc5">
+        </div>
+
+      </div>
+
 
       <div class="foot">
         <a class="btn btn-primary" routerLink="/">Volver atrás</a>
