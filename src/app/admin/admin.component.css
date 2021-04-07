@@ -36,12 +36,23 @@ textarea {width: 100%;}
   border-radius: 16px;
   font-size: 18px;
 }
+.pd1r{
+  padding: 1rem;
+}
+.img5{
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+}
 
 
 .sel {
+  border: solid blue;
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding:1rem 0 2rem 0;
 }
 .form-g {
   padding: 1rem;

@@ -30,7 +30,7 @@
     <div class="form-g" *ngIf="articulo.pagina">
       <form (ngSubmit)="addArticulos()">
         <label for="imagen">Imagen</label>
-        <input type="file" accept=".png, .jpg, .jpeg" #inputimg name="imagen" id="imagen" (change)="handleImg($event)">
+        <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg($event)">
 
           <div id="porcent" *ngIf="uploadPercent" >{{ uploadPercent | async }} % </div>
           <div id="porcentbar" role="progressbar" *ngIf="uploadPercent" [style.width]="(uploadPercent | async)+'%'" ></div>
@@ -43,6 +43,10 @@
 
           <label for="titulo">Nombre</label>
           <input type="text" name="titulo" id="titulo" placeholder="Nombre o Titulo" [(ngModel)]="articulo.titulo">
+
+          <label for="color">Colores</label>
+          <input type="text" name="color" id="color" placeholder="Colores disponibles" [(ngModel)]="articulo.color">
+
           <label for="indice">Indice</label>
           <input type="text" name="indice" id="indice" placeholder="Numero de prioridad- a menor # mayor prioridad" [(ngModel)]="articulo.indice">
 
@@ -72,9 +76,82 @@
           <input type="text" name="precio" id="precio" [(ngModel)]="articulo.precio">
           <label for="descripcion">Descripción</label>
           <textarea name="descripcion" id="descripcion" cols="70" rows="10" [(ngModel)]="articulo.descripcion"></textarea>
+
+          <div class="opc-body">
+            <div class="sel">
+              <label for="select">MAS OPCIONES </label>
+              <select name="select"  [(ngModel)]="articulo.mas.masOpc">
+                <option value="home" >Fotos y Referencia</option>
+                <option value="">Cerrar</option>
+              </select>
+            </div>
+            <div class="opc" *ngIf="articulo.mas.masOpc" >
+              <div class="op1" style="display: flex;text-align: center;">
+                <div class="pd1r" style="width: 50%;border: 1px solid">
+                  <label for="subt">Imagen 1</label>
+                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg1($event)">
+                  <div id="porcent" *ngIf="uploadPercent1" >{{ uploadPercent1 | async }} % </div>
+                  <div id="porcentbar" role="progressbar" *ngIf="uploadPercent1" [style.width]="(uploadPercent1 | async)+'%'" ></div>
+                  <label for="precio">Referencia 1</label>
+                  <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc1">
+
+                </div>
+
+                <div class="pd1r" style="width: 50%;border: 1px solid">
+                  <label for="subt">Imagen 2</label>
+                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg2($event)">
+                  <div id="porcent" *ngIf="uploadPercent2" >{{ uploadPercent2 | async }} % </div>
+                  <div id="porcentbar" role="progressbar" *ngIf="uploadPercent2" [style.width]="(uploadPercent2 | async)+'%'" ></div>
+                  <label for="precio">Referencia 2</label>
+                  <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc2">
+
+                </div>
+
+              </div>
+
+              <div class="op2" style="display: flex; text-align: center;">
+                <div class="pd1r" style="width: 50%;border: 1px solid">
+                  <label for="subt">Imagen 3</label>
+                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg3($event)">
+                  <div id="porcent" *ngIf="uploadPercent3" >{{ uploadPercent3 | async }} % </div>
+                  <div id="porcentbar" role="progressbar" *ngIf="uploadPercent3" [style.width]="(uploadPercent3 | async)+'%'" ></div>
+                  <label for="precio">Referencia 3</label>
+                  <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc3">
+
+                </div>
+
+                <div class="pd1r" style="width: 50%;border: 1px solid">
+                  <label for="subt">Imagen 4</label>
+                  <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg4($event)">
+                  <div id="porcent" *ngIf="uploadPercent4" >{{ uploadPercent4 | async }} % </div>
+                  <div id="porcentbar" role="progressbar" *ngIf="uploadPercent4" [style.width]="(uploadPercent4 | async)+'%'" ></div>
+                  <label for="precio">Referencia 4</label>
+                  <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc4">
+
+                </div>
+
+              </div>
+
+              <div class="pd1r img5" >
+                <label for="subt">Imagen 5</label>
+                <input type="file" accept=".png, .jpg, .jpeg " #inputimg name="imagen" id="imagen" (change)="handleImg5($event)">
+                <div id="porcent" *ngIf="uploadPercent5" >{{ uploadPercent5 | async }} % </div>
+                <div id="porcentbar" role="progressbar" *ngIf="uploadPercent5" [style.width]="(uploadPercent5 | async)+'%'" ></div>
+                <label for="precio">Referencia 5</label>
+                <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc5">
+
+              </div>
+
+
+            </div>
+          </div>
+
+
         <div class="env" style="display: flex;">
           <input *ngIf="linnkImg && articulo.titulo && articulo.descripcion " type="submit" class="enviar" value="Enviar" >
         </div>
+
+
       </form>
     </div>
 
