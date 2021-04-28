@@ -92,6 +92,9 @@
                   <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg1($event)">
                   <div id="porcent" *ngIf="uploadPercent1" >{{ uploadPercent1 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent1" [style.width]="(uploadPercent1 | async)+'%'" ></div>
+                  <div class="im" style="display: flex; justify-content: center;">
+                    <img *ngIf="articulo.mas.linkImg1" [src]="articulo.mas.linkImg1" alt="" style="width: 10rem;margin: 1rem auto;">
+                  </div>
                   <label for="precio">Referencia 1</label>
                   <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc1">
 
@@ -102,6 +105,9 @@
                   <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg2($event)">
                   <div id="porcent" *ngIf="uploadPercent2" >{{ uploadPercent2 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent2" [style.width]="(uploadPercent2 | async)+'%'" ></div>
+                  <div class="im" style="display: flex; justify-content: center;">
+                    <img *ngIf="articulo.mas.linkImg2" [src]="articulo.mas.linkImg2" alt="" style="width: 10rem;margin: 1rem auto;">
+                  </div>
                   <label for="precio">Referencia 2</label>
                   <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc2">
 
@@ -115,6 +121,9 @@
                   <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg3($event)">
                   <div id="porcent" *ngIf="uploadPercent3" >{{ uploadPercent3 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent3" [style.width]="(uploadPercent3 | async)+'%'" ></div>
+                  <div class="im" style="display: flex; justify-content: center;">
+                    <img *ngIf="articulo.mas.linkImg3" [src]="articulo.mas.linkImg3" alt="" style="width: 10rem;margin: 1rem auto;">
+                  </div>
                   <label for="precio">Referencia 3</label>
                   <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc3">
 
@@ -125,6 +134,9 @@
                   <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg4($event)">
                   <div id="porcent" *ngIf="uploadPercent4" >{{ uploadPercent4 | async }} % </div>
                   <div id="porcentbar" role="progressbar" *ngIf="uploadPercent4" [style.width]="(uploadPercent4 | async)+'%'" ></div>
+                  <div class="im" style="display: flex; justify-content: center;">
+                    <img *ngIf="articulo.mas.linkImg4" [src]="articulo.mas.linkImg4" alt="" style="width: 10rem;margin: 1rem auto;">
+                  </div>
                   <label for="precio">Referencia 4</label>
                   <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc4">
 
@@ -137,6 +149,9 @@
                 <input type="file" accept=".png, .jpg, .jpeg, .webp" #inputimg name="imagen" id="imagen" (change)="handleImg5($event)">
                 <div id="porcent" *ngIf="uploadPercent5" >{{ uploadPercent5 | async }} % </div>
                 <div id="porcentbar" role="progressbar" *ngIf="uploadPercent5" [style.width]="(uploadPercent5 | async)+'%'" ></div>
+                <div class="im" style="display: flex; justify-content: center;">
+                  <img *ngIf="articulo.mas.linkImg5" [src]="articulo.mas.linkImg5" alt="" style="width: 10rem;margin: 1rem auto;">
+                </div>
                 <label for="precio">Referencia 5</label>
                 <input type="text" name="precio" id="precio" [(ngModel)]="articulo.mas.desc5">
 
