@@ -2,8 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { LoginSService } from '../login/login-s.service';
-import { PitchServicesService }  from '../pitch-services.service';
-import { NoSeoService } from '../no-seo.service'
+import { PitchServicesService }  from '../../shared/services/pitch-services.service';
+import { NoSeoService } from '../../shared/services/no-seo.service'
 
 @Component({
   selector: 'app-admin',

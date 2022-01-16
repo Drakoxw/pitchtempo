@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../seo.service';
+import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'app-tecnico',

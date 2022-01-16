@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { CardFullComponent } from './card-full/card-full.component';
-import { HomeComponent } from './home/home.component';
-import { LoginGuardianService } from './login/login-guardian.service';
-import { LoginComponent } from './login/login.component';
-import { TecnicoComponent } from './tecnico/tecnico.component';
-import { TiendaPrincipalComponent } from './tienda-principal/tienda-principal.component';
-import { TiendaComponent } from './tienda/tienda.component';
-import { XAccesoriosComponent } from './x-accesorios/x-accesorios.component';
-import { XAudifonosComponent } from './x-audifonos/x-audifonos.component';
-import { XBasesLaptopComponent } from './x-bases-laptop/x-bases-laptop.component';
-import { XCablesFactComponent } from './x-cables-fact/x-cables-fact.component';
-import { XCoversComponent } from './x-covers/x-covers.component';
-import { XImportTarjetasComponent } from './x-import-tarjetas/x-import-tarjetas.component';
-import { XNuevosUsadosComponent } from './x-nuevos-usados/x-nuevos-usados.component';
-import { XPicthPulsadComponent } from './x-picth-pulsad/x-picth-pulsad.component';
-import { XSkinEquiposComponent } from './x-skin-equipos/x-skin-equipos.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { CardFullComponent } from './pages/card-full/card-full.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginGuardianService } from './pages/login/login-guardian.service';
+import { LoginComponent } from './pages/login/login.component';
+import { TecnicoComponent } from './pages/tecnico/tecnico.component';
+import { TiendaPrincipalComponent } from './pages/tienda-principal/tienda-principal.component';
+import { TiendaComponent } from './components/tienda/tienda.component';
+import { XAccesoriosComponent } from './content/x-accesorios/x-accesorios.component';
+import { XAudifonosComponent } from './content/x-audifonos/x-audifonos.component';
+import { XBasesLaptopComponent } from './content/x-bases-laptop/x-bases-laptop.component';
+import { XCablesFactComponent } from './content/x-cables-fact/x-cables-fact.component';
+import { XCoversComponent } from './content/x-covers/x-covers.component';
+import { XImportTarjetasComponent } from './content/x-import-tarjetas/x-import-tarjetas.component';
+import { XNuevosUsadosComponent } from './content/x-nuevos-usados/x-nuevos-usados.component';
+import { XPicthPulsadComponent } from './content/x-picth-pulsad/x-picth-pulsad.component';
+import { XSkinEquiposComponent } from './content/x-skin-equipos/x-skin-equipos.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataGetPitch } from '../models/data-get-pitch';
-import { PitchServicesService } from '../pitch-services.service'
+import { DataGetPitch } from '../../shared/models/data-get-pitch';
+import { PitchServicesService } from '../../shared/services/pitch-services.service'
 
 @Component({
   selector: 'app-cards',

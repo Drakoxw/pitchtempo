@@ -2,7 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { LoginSService } from './login-s.service';
-import { NoSeoService } from '../no-seo.service'
+import { NoSeoService } from '../../shared/services/no-seo.service'
 
 @Component({
   selector: 'app-login',

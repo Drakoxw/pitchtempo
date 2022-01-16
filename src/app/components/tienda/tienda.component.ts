@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../seo.service';
+import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'app-tienda',
@@ -8,10 +8,12 @@ import { SeoService } from '../seo.service';
   styleUrls: ['./tienda.component.css']
 })
 export class TiendaComponent implements OnInit {
+  @Input() img: boolean = true;
+  filtro = 'ventas';
 
-  filtro = 'ventas'
-
-  constructor(private title:Title, private seo:SeoService) { }
+  constructor(private title:Title,
+              private seo:SeoService)
+  { }
 
   ngOnInit(): void {
     let t:string = "Pitch Tempo Ventas y Repuestos"

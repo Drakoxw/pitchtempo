@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../seo.service';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,9 @@ import { SeoService } from '../seo.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private title:Title, private seo:SeoService) { }
+  constructor(private title:Title, 
+              private seo:SeoService) 
+  { }
 
   ngOnInit(): void {
     let t:string = "Pitch Tempo Reparaciones"

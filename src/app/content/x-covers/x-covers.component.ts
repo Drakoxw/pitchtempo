@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XCoversComponent implements OnInit {
 
-  filtro = 'cover'
+  filtro = 'cover';
+  img = false;
 
   constructor() { }
 
